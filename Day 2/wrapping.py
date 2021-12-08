@@ -10,5 +10,5 @@ R = [(line[0] + line[1]) * 2 + line[0] * line[1] * line[2] for line in R]
 print(sum(R))
 
 output = open('output', 'w')
-#output.write(str(final_floor) + '\n' + str(basement) + '\n')
+output.write(str(sum(S)) + '\n' + str(sum(R)) + '\n')
 output.close()
