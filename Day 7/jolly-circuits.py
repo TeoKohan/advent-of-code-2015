@@ -1,6 +1,3 @@
-from os import error
-
-
 I = [line.strip() for line in open('input')]
 (INS, OUT) = zip(*[line.split('->') for line in I])
 OUT = [n.strip() for n in OUT]
@@ -28,10 +25,7 @@ def parse(signal):
     else:
         operation = signals[signal]
         if (len(operation) == 1):
-            if signal.isnumeric():
-                result[signal] = int(signal)
-            else:
-                result[signal] = parse(operation[0])
+            result[signal] = parse(operation[0])
         if (len(operation) == 2):
             (OP, R) = (functions[operation[0]], parse(operation[1]))
             result[signal] =  OP(R)
