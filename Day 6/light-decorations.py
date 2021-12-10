@@ -1,4 +1,3 @@
-import hashlib
 I = [line.strip() for line in open('input')]
 L = [line.split() for line in I]
 L = [[word for word in line if word != 'turn' and word != 'through'] for line in L]
