@@ -14,5 +14,6 @@ character_number = sum([len(line) for line in I])
 decode_number    = sum([len(line) - line.count('H') * 2 for line in U])
 encode_number    = sum([len(line) + 6 for line in E])
 
-print(character_number - decode_number)
-print(encode_number - character_number)
+output = open('output', 'w')
+output.write(str(character_number - decode_number) + '\n' + str(encode_number - character_number) + '\n')
+output.close()
