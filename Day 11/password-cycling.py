@@ -1,4 +1,4 @@
-from itertools import count, groupby
+from itertools import groupby
 I = [line.strip() for line in open('input')]
 L = I[0]
 
