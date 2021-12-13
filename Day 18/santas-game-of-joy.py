@@ -1,5 +1,3 @@
-from itertools import repeat
-
 I = [line.strip() for line in open('input')]
 A = [[True if c == '#' else False for c in line] for line in I]
 
