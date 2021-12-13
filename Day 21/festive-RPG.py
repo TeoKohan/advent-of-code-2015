@@ -1,5 +1,5 @@
 from itertools import chain, combinations
-from math import inf
+
 I = [line.strip() for line in open('input')]
 (H, D, A) = [int(L.split(':')[1].strip()) for L in I]
 boss = {'health': H, 'damage': D, 'armor': A}
