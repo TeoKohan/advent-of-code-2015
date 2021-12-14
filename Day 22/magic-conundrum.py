@@ -74,7 +74,7 @@ def advance_timelines(timelines):
 def battle(fight):
     timelines = [{} | fight]
     least_mana_used = inf
-    while(len(timelines) > 0 and len(timelines) < 3 * 10**6):
+    while(len(timelines) > 0):
         least_mana_used = min(least_mana_used, min([T['info']['mana_spent'] for T in timelines if T['boss']['health'] <= 0], default = inf))
         timelines = advance_timelines([T for T in timelines if T['info']['mana_spent'] < least_mana_used and T['player']['health'] > 0 and T['boss']['health'] > 0])
     return least_mana_used
