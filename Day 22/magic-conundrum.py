@@ -1,4 +1,3 @@
-import copy
 from math import inf
 
 I = [line.strip() for line in open('input')]
